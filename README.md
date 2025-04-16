@@ -103,8 +103,12 @@
     - お気に入り削除
 
 
-### 画面遷移図
+## 画面遷移図
 URLは[こちら](https://www.figma.com/design/qiYauRcFg0Ew4gOpA4y6Ql/%E7%84%A1%E9%A1%8C?node-id=0-1&t=8vpV6ZzYi7Zx2LPL-1)
+
+
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/66c079944640a13833c9def164ee376f.png)](https://gyazo.com/66c079944640a13833c9def164ee376f)
 
 
 ### 本リリースまでに作っていたいもの
