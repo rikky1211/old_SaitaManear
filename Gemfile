@@ -34,6 +34,22 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+
+# --------- 以下手動追加 --------
+  # アプリケーションの文言を英語以外の別の1つの言語に翻訳する機能や、多言語サポート機能を簡単かつ拡張可能な方式で導入するためのフレームワークを提供します。
+  gem 'rails-i18n', '~> 7.0', '>= 7.0.10'
+
+  # WardenをベースにしたRails向けの柔軟な認証ソリューションです。
+  gem 'devise'
+
+  # Deviseはコントローラー、モデル、その他の領域でi18nをサポートしていますが、
+  # 国際化されたビューはサポートしていません。devise-i18nは国際化をサポートします。
+  # また、Deviseには実際の翻訳は含まれていません。devise-i18nはこれもサポートします。
+  gem 'devise-i18n'
+
+# -------- ここまで --------
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
