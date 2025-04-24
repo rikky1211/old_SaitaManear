@@ -47,6 +47,9 @@ gem "bootsnap", require: false
   # また、Deviseには実際の翻訳は含まれていません。devise-i18nはこれもサポートします。
   gem 'devise-i18n'
 
+  # Tailwind バージョンを3.3.1に固定。v4だと対応しているコンポーネントが少ないため
+  gem "tailwindcss-rails", "~> 3.3.1"
+
 # -------- ここまで --------
 
 
