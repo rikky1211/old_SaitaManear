@@ -48,7 +48,7 @@ gem "bootsnap", require: false
   gem 'devise-i18n'
 
   # Tailwind バージョンを3.3.1に固定。v4だと対応しているコンポーネントが少ないため
-  gem "tailwindcss-rails", "~> 3.3.1"
+  gem "tailwindcss-rails", "~> 4.2.2"
 
 # -------- ここまで --------
 
