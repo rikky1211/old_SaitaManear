@@ -31,24 +31,27 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+  # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+  # gem "image_processing", "~> 1.2"
 
 
-# --------- 以下手動追加 --------
+  # --------- 以下手動追加 --------
   # アプリケーションの文言を英語以外の別の1つの言語に翻訳する機能や、多言語サポート機能を簡単かつ拡張可能な方式で導入するためのフレームワークを提供します。
-  gem 'rails-i18n', '~> 7.0', '>= 7.0.10'
+  gem "rails-i18n", "~> 7.0", ">= 7.0.10"
 
   # WardenをベースにしたRails向けの柔軟な認証ソリューションです。
-  gem 'devise'
+  gem "devise"
 
   # Deviseはコントローラー、モデル、その他の領域でi18nをサポートしていますが、
   # 国際化されたビューはサポートしていません。devise-i18nは国際化をサポートします。
   # また、Deviseには実際の翻訳は含まれていません。devise-i18nはこれもサポートします。
-  gem 'devise-i18n'
+  gem "devise-i18n"
 
   # Tailwind バージョンを3.3.1に固定。v4だと対応しているコンポーネントが少ないため
   gem "tailwindcss-rails", "~> 3.3.1"
+
+  # rubocop Ruby_Lintcheck
+  gem "rubocop"
 
 # -------- ここまで --------
 
