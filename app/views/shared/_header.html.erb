@@ -5,9 +5,9 @@
       <a class="text-3xl font-bold text-orange-600">Saita<span class="text-yellow-400">Manear</span></a>
     </div>
     <div class="flex-none">
-      <button class="btn btn-ghost text-black text-sm">
-        <%= link_to "ログイン", new_user_session_path %>
-      </button>
+      <%= link_to new_user_session_path, class:"btn btn-ghost text-black text-sm font-bold" do %>
+        <span>ログイン</span>
+      <% end %>
     </div>
   </div>
 
