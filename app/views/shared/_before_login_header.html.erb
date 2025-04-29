@@ -1,0 +1,16 @@
+<header class="fixed top-0 left-0 right-0">
+  <!-- ヘッダー -->
+  <div class="navbar bg-green-400">
+    <div class="flex-1">
+      <a class="text-3xl font-bold text-orange-600">Saita<span class="text-yellow-400">Manear</span></a>
+    </div>
+    <div class="flex-none">
+      <%= link_to destroy_user_session_path, class:"btn btn-outline btn-w text-black text-sm font-bold" do %>
+        <span>サインアウト</span>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- サブヘッダー -->
+  <div class="bg-orange-300 text-sm p-1 px-3">Layout ログイン後</div>
+</header>

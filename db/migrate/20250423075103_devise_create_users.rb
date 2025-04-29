@@ -37,7 +37,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.2]
       # t.datetime :locked_at
 
       ## 手動追加
-      t.string :name, null: false
+      t.string :name, null: false, default: "SaitaManear_Account"
       t.string :avatar
       t.integer :role, null: false, default: 0
       t.timestamps null: false
