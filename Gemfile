@@ -53,6 +53,9 @@ gem "bootsnap", require: false
   # rubocop Ruby_Lintcheck
   gem "rubocop"
 
+  # 環境変数を管理することができるgemです。(.envファイルで使用)
+  gem "dotenv-rails"
+
 # -------- ここまで --------
 
 
@@ -78,4 +81,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "dockerfile-rails", ">= 1.7", :group => :development
+gem "dockerfile-rails", ">= 1.7", group: :development
