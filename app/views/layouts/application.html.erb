@@ -21,13 +21,17 @@
   <body>
     <% if signed_in? %>
       <%= render 'shared/header' %>
+      <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
+      </main>
+      <%= render 'shared/footer' %>
+
     <% else %>
       <%= render 'shared/before_login_header' %>
+      <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
+      </main>
+      <%= render 'shared/before_login_footer' %>
     <% end %>
-
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
-    <%= render 'shared/footer' %>
   </body>
 </html>
