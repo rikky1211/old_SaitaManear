@@ -36,10 +36,21 @@
     <span>リスト検索</span>
   <% end %>
 
-  <%= link_to new_user_session_path, class:"btn btn-ghost flex flex-col items-center font-bold px-5" do %>
-    <svg class="h-6 w-6 text-yellow-800" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
-    </svg>
-    <span>マイページ</span>
+
+
+  <% if signed_in?%>
+    <%= link_to your_profile_path, class:"btn btn-ghost flex flex-col items-center font-bold px-5" do %>
+      <svg class="h-6 w-6 text-yellow-800" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+      </svg>
+      <span>マイページ</span>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path, class:"btn btn-ghost flex flex-col items-center font-bold px-5" do %>
+      <svg class="h-6 w-6 text-yellow-800" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+      </svg>
+      <span>マイページ</span>
+    <% end %>
   <% end %>
 </footer>
