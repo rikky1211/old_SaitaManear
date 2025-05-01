@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <button>output</button>
+<button class="btn btn-active">Default</button>
+<button class="btn btn-active btn-neutral">Neutral</button>
+<button class="btn btn-active btn-link">Link</button>
+    <%= link_to "編集", edit_your_profile_path, class: "btn btn-secondary w-20" %>
+    <div class="flex flex-col">
+      <%= @user.avatar %>
+      <%= @user.name %>
+      <%= @user.email %>
+    </div>
+  </div>
+</div>
