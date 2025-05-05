@@ -48,7 +48,8 @@ gem "bootsnap", require: false
   gem "devise-i18n"
 
   # Tailwind バージョンを3.3.1に固定。v4だと対応しているコンポーネントが少ないため
-  gem "tailwindcss-rails", "~> 3.3.1"
+  gem "tailwindcss-rails"
+  gem 'tailwindcss-ruby', '~> 3.4', '>= 3.4.17'
 
   # rubocop Ruby_Lintcheck
   gem "rubocop"
