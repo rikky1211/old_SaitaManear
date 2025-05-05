@@ -49,7 +49,7 @@ gem "bootsnap", require: false
 
   # Tailwind バージョンを3.3.1に固定。v4だと対応しているコンポーネントが少ないため
   gem "tailwindcss-rails"
-  gem 'tailwindcss-ruby', '~> 3.4', '>= 3.4.17'
+  gem 'tailwindcss-ruby', '~> 4.1'
 
   # rubocop Ruby_Lintcheck
   gem "rubocop"
