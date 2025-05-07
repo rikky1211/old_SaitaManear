@@ -54,8 +54,11 @@ gem "bootsnap", require: false
   # rubocop Ruby_Lintcheck
   gem "rubocop"
 
-  # 環境変数を管理することができるgemです。(.envファイルで使用)
+  # GoogleMap APIキー保存/環境変数を管理することができるgemです。(.envファイルで使用)
   gem "dotenv-rails"
+
+  # GoogleMap/住所や地名から座標（経度緯度）を取得したり、その逆を行ったりするgem
+  gem 'geocoder'
 
 # -------- ここまで --------
 
