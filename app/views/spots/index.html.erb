@@ -12,7 +12,7 @@
 
   function initMap() {
     // 地図要素を取得
-    const mapElement = document.getElementById('map')
+    const mapElement = document.getElementById('map');
 
     // 現在地を取得
     // ブラウザに位置情報の取得を依頼する関数です。成功すると、現在地の情報が position オブジェクトとして渡されます。
@@ -36,12 +36,24 @@
 
       // 投稿されているマーカーを追加
       <% @spots.each do |spot| %>
-        new google.maps.Marker({
+        const marker = new google.maps.Marker({
           position: {lat: <%= spot.latitude %>, lng: <%= spot.longitude %>}, 
           map: map,
-          name: '<%= j spot.name %>'
+          // j は Rails の escape_javascript ヘルパーの省略記法。JavaScript に埋め込む文字列を安全に変換（エスケープ）するために使用
+          title: '<%= j spot.name %>'
+        });
+
+        // 吹き出しの追加
+        const infoWindow = new google.maps.InfoWindow({
+          content: `<strong><%= j spot.name %></strong><br><%= j spot.summary %>`
+        });
+
+        // マーカーにクリックイベントを追加
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
         });
       <% end %>
+
     });
   }
 </script>
