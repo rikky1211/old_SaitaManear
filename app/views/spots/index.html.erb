@@ -45,7 +45,8 @@
 
         // 吹き出しの追加
         const infoWindow = new google.maps.InfoWindow({
-          content: `<strong><%= j spot.name %></strong><br><%= j spot.summary %>`
+          content: `<%= j spot.name %><br>
+                    <%= j spot.summary %><br>`
         });
 
         // マーカーにクリックイベントを追加
