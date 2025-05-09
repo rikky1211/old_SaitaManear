@@ -49,7 +49,7 @@ gem "bootsnap", require: false
 
   # Tailwind バージョンを3.3.1に固定。v4だと対応しているコンポーネントが少ないため
   gem "tailwindcss-rails"
-  gem 'tailwindcss-ruby', '~> 3.4', '>= 3.4.17'
+  gem "tailwindcss-ruby", "~> 3.4", ">= 3.4.17"
 
   # rubocop Ruby_Lintcheck
   gem "rubocop"
@@ -58,7 +58,7 @@ gem "bootsnap", require: false
   gem "dotenv-rails"
 
   # GoogleMap/住所や地名から座標（経度緯度）を取得したり、その逆を行ったりするgem
-  gem 'geocoder'
+  gem "geocoder"
 
 # -------- ここまで --------
 

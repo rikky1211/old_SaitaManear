@@ -21,14 +21,14 @@
   <body>
     <% if signed_in? %>
       <%= render 'shared/header' %>
-      <main class="container mx-auto mt-28 px-5 flex">
+      <main class="mx-auto mt-28 pb-64">
         <%= yield %>
       </main>
       <%= render 'shared/footer' %>
 
     <% else %>
       <%= render 'shared/before_login_header' %>
-      <main class="container mx-auto mt-28 px-5 flex">
+      <main class="mx-auto mt-28 pb-64">
         <%= yield %>
       </main>
       <%= render 'shared/before_login_footer' %>
