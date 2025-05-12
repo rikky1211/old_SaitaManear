@@ -52,12 +52,12 @@
 </div>
 
 <!-- Google Maps Script -->
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=NewMacker" async defer></script>
 
 <script>
   let map, marker;
 
-  function initMap() {
+  function NewMacker() {
     const default_LatLng = { lat: 35.681236, lng: 139.767125 };
     const mapElement = document.getElementById('map');
 
@@ -117,9 +117,6 @@
 
 <style>
   #map {
-    position: absolute;
-    top: 64px;
-    bottom: 80px;
-    width: 94%;
+    width: 98%;
   }
 </style>

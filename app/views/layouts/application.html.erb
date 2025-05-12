@@ -20,16 +20,16 @@
   <body>
     <% if signed_in? %>
       <%= render 'shared/header' %>
-      <main style="padding-top: 60px";>
+      <div style="padding-top: 64px; padding-bottom: 64px;">
         <%= yield %>
-      </main>
+      </div>
       <%= render 'shared/footer' %>
 
     <% else %>
       <%= render 'shared/before_login_header' %>
-      <main style="padding-top: 60px";>
+      <div style="padding-top: 64px; padding-bottom: 64px;">
         <%= yield %>
-      </main>
+      </div>
       <%= render 'shared/before_login_footer' %>
     <% end %>
   </body>

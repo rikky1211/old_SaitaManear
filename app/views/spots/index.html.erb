@@ -3,7 +3,7 @@
 <script>
   let map; // グローバルに定義
 
-  function initMap() {
+  function SearchMarker() {
     // 地図要素を取得
     const mapElement = document.getElementById('map');
 
@@ -52,7 +52,7 @@
   }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=SearchMarker" async defer></script>
 
 <style>
   #map {
