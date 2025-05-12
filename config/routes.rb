@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "top#index"
-  resources :spots, only: %i[index new]
+  resources :spots, only: %i[index new create]
   resource :your_profile, only: %i[show edit update destory]
 end

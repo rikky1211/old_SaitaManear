@@ -48,14 +48,19 @@ gem "bootsnap", require: false
   gem "devise-i18n"
 
   # Tailwind バージョンを3.3.1に固定。v4だと対応しているコンポーネントが少ないため
-  gem "tailwindcss-rails"
-  gem 'tailwindcss-ruby', '~> 3.4', '>= 3.4.17'
+  # gem "tailwindcss-rails"
+  # gem "tailwindcss-ruby", "~> 3.4", ">= 3.4.17"
+  # importmapを使用しない場合はこちらを使用。
+  gem "cssbundling-rails"
 
   # rubocop Ruby_Lintcheck
   gem "rubocop"
 
-  # 環境変数を管理することができるgemです。(.envファイルで使用)
+  # GoogleMap APIキー保存/環境変数を管理することができるgemです。(.envファイルで使用)
   gem "dotenv-rails"
+
+  # GoogleMap/住所や地名から座標（経度緯度）を取得したり、その逆を行ったりするgem
+  gem "geocoder"
 
 # -------- ここまで --------
 

@@ -1,7 +1,6 @@
 # Deviseについて
 ・
 
-
 ##　Userモデル作成/ログイン画面作成
 ・最初のログイン画面については
   「docker compose exec web rails g devise [モデル名]」で作成。(括弧は入りません)

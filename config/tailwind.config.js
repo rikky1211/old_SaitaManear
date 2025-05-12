@@ -1,34 +1,14 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   content: [
-    './public/*.html',
-    './app/helpers/**/*.rb',
-    './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*.html.erb',  // これでビューのHTMLファイルを監視します
+    './app/helpers/**/*.rb',      // ヘルパーファイルも監視対象に
+    './app/javascript/**/*.js'   // JavaScriptファイルも監視対象に
+
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
-    },
+    extend: {},
   },
-  plugins: [
-    require('daisyui')
-    // require('@tailwindcss/forms'),
-    // require('@tailwindcss/typography'),
-    // require('@tailwindcss/container-queries'),
-  ],
-  daisyui: {
-    themes:[
-      {
-        ekiplat: {
-          "base-100": "#FFFFFF",
-        }
-      }
-    ]
-
-  }
-
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
 }
