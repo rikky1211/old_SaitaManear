@@ -38,8 +38,13 @@
 
         // 吹き出しの追加
         const infoWindow = new google.maps.InfoWindow({
-          content: `<%= j spot.name %><br>
-                    <%= j spot.summary %><br>`
+          content: 
+                  `
+                    <%= j spot.name %><br>
+                    <%= j spot.summary %><br>
+                    <br>
+                    <a href="<%= spot_path(spot) %>">詳細はこちら</a>
+                  `
         });
 
         // マーカーにクリックイベントを追加
@@ -52,7 +57,9 @@
   }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=SearchMarker" async defer></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=SearchMarker">
+</script>
 
 <style>
   #map {
