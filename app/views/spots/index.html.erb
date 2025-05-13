@@ -40,8 +40,8 @@
         const infoWindow = new google.maps.InfoWindow({
           content: 
                   `
-                    <%= j spot.name %><br>
-                    <%= j spot.summary %><br>
+                    <%= spot.name %><br>
+                    <%= spot.summary %><br>
                     <br>
                     <a href="<%= spot_path(spot) %>">詳細はこちら</a>
                   `
