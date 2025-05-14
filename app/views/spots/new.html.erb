@@ -73,10 +73,12 @@
     navigator.geolocation.getCurrentPosition(function (position) {
       const userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-      map = new google.maps.Map(mapElement, {
-        center: userLatLng,
-        zoom: 15
-      });
+      // mapを２回読み込んでしまっていたのでコード書き換え。
+      map.setCenter(userLatLng);
+      // map = new google.maps.Map(mapElement, {
+        // center: userLatLng,
+        // zoom: 15
+      // });
 
       const geocoder = new google.maps.Geocoder();
       const input = document.createElement("input");

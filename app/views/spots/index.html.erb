@@ -29,30 +29,34 @@
 
       // 投稿されているマーカーを追加
       <% @spots.each do |spot| %>
-        const marker = new google.maps.Marker({
-          position: {lat: <%= spot.latitude %>, lng: <%= spot.longitude %>}, 
-          map: map,
-          // j は Rails の escape_javascript ヘルパーの省略記法。JavaScript に埋め込む文字列を安全に変換（エスケープ）するために使用
-          title: '<%= j spot.name %>'
-        });
+        (
+          function(){
+            const marker = new google.maps.Marker({
+              position: {lat: <%= spot.latitude %>, lng: <%= spot.longitude %>},
+              map: map,
+              // j は Rails の escape_javascript ヘルパーの省略記法。JavaScript に埋め込む文字列を安全に変換（エスケープ）するために使用
+              title: '<%= j spot.name %>'
+            })
 
-        // 吹き出しの追加
-        const infoWindow = new google.maps.InfoWindow({
-          content: 
-                  `
-                    <%= spot.name %><br>
-                    <%= spot.summary %><br>
-                    <br>
-                    <a href="<%= spot_path(spot) %>">詳細はこちら</a>
-                  `
-        });
+            // 吹き出しの追加
+            const infoWindow = new google.maps.InfoWindow({
+              content: 
+                    `
+                      <%= j spot.name %><br>
+                      <%= j spot.summary %><br>
+                      <br>
+                      <a href="<%= h spot_path(spot) %>">詳細はこちら</a>
+                    `
+            });
 
-        // マーカーにクリックイベントを追加
-        marker.addListener('click', function() {
-          infoWindow.open(map, marker);
-        });
+            // マーカーにクリックイベントを追加
+            marker.addListener('click', function() {
+              infoWindow.open(map, marker);
+            });
+
+          }
+        )();
       <% end %>
-
     });
   }
 </script>
